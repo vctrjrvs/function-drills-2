@@ -1,5 +1,4 @@
 function decode(word) {
-    for (let i = 0; i < word.length; i++) {
            if (word[0] === "a") {
                return word[1];
            }
@@ -13,9 +12,18 @@ function decode(word) {
                return word[4];
            }
            if (word[0] !== "a" || "b" || "c" || "d") {
-               return " "
+               return (" ");
            }
        }
-     console.log(decode('craft', 'block', 'argon', 'meter', 'bells', 'brown', 'croon', 'droop'))
-   } 
-   
+    
+function crackTheCode(list) {
+    let result = [];
+    for (let i = 0; i < list.length; i++) {
+        result.push(decode(list[i]));
+    } 
+    return result;
+}
+
+let list = ['craft', 'block', 'argon', 'meter', 'bells', 'brown', 'croon', 'droop'];
+
+console.log(crackTheCode(list));  
