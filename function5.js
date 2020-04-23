@@ -3,9 +3,7 @@ const playerPicks = playerPick =>{
     playerPick = playerPick.toLowerCase();
     if (playerPick === 'rock' || playerPick==='paper' || playerPick ==='scissors') {
       return playerPick;
-    } else {
-      throw new Error ('Invalid choice!');
-    }
+    } else throw new Error ('Invalid choice!');
 };
   
   function computerPicks() {
